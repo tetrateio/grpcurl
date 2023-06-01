@@ -30,7 +30,7 @@ import (
 	// Register xds so xds and xds-experimental resolver schemes work
 	_ "google.golang.org/grpc/xds"
 
-	"github.com/fullstorydev/grpcurl"
+	"github.com/tetrateio/grpcurl"
 )
 
 // To avoid confusion between program error codes and the gRPC resonse

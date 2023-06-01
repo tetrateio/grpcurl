@@ -10,7 +10,7 @@ The release process consists of a handful of tasks:
 5. Push the docker image to Docker Hub, with both a version tag and the "latest" tag.
 6. Submits a PR to update the [Homebrew](https://brew.sh/) recipe with the latest version.
 
-Most of this is automated via a script in this same directory. The main thing you will need is a GitHub personal access token, which will be used for creating the release in GitHub (so you need write access to the fullstorydev/grpcurl repo) and to open a Homebrew pull request.
+Most of this is automated via a script in this same directory. The main thing you will need is a GitHub personal access token, which will be used for creating the release in GitHub (so you need write access to the tetrateio/grpcurl repo) and to open a Homebrew pull request.
 
 ## Creating a new release
 
@@ -63,7 +63,7 @@ The last step is to update the Homebrew recipe to use the latest version. First,
 
 ```sh
 # download the source archive from GitHub
-URL=https://github.com/fullstorydev/grpcurl/archive/v2.3.4.tar.gz
+URL=https://github.com/tetrateio/grpcurl/archive/v2.3.4.tar.gz
 curl -L -o tmp.tgz $URL
 # and compute the SHA
 SHA="$(sha256sum < tmp.tgz | awk '{ print $1 }')"
