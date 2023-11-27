@@ -17,6 +17,7 @@ RUN go build -o /grpcurl \
     ./cmd/grpcurl
 
 FROM alpine:3 as alpine
+RUN apk update && apk upgrade
 WORKDIR /
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /etc/passwd /etc/passwd
